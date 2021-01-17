@@ -1,0 +1,46 @@
+#homepage{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+
+    .blob1, .blob2, .blob3{
+        position: absolute;
+        z-index: -1;        
+    }
+
+    .blob1{
+        left: 0;
+        top:0;
+    }
+
+    .blob2{
+        left: 0;
+        bottom: 0;
+    }
+    .blob3{
+        right: 0;
+        top: -100px;
+    }
+
+    .highlight{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        h1{
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 80px;
+        }
+        p{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    }
+
+    
+}

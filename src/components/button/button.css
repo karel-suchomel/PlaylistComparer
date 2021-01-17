@@ -1,0 +1,12 @@
+.cta{
+    text-decoration: none;
+    color: white;
+    background-color: #03DAC5;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+.cta:hover{
+    opacity: 0.8;
+    transition: .3s all;
+}

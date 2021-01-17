@@ -1,0 +1,23 @@
+.textInput{
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border: 2px solid #2d2d2d;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 18px;
+    color: #7e7e7e;
+    padding: 10px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    text-align: center;
+}
+
+.textInput:focus{
+    border-color: #03DAC5;
+    transition: .3s all;
+}
+
+.textInput:not(:first-child){
+    margin: 20px 0;
+}

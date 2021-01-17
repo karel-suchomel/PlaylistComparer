@@ -1,0 +1,40 @@
+header{
+    background-color: #1f1f1f;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+    #logo{        
+        svg{
+            width: 60%;
+        } 
+    }
+
+    nav{
+        width: 35%;
+        .navigation{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                text-decoration: none;     
+                color: #fff;       
+                cursor: pointer;
+                transition: 0.2s all;
+                font-weight: 700;
+            }
+
+            .loginButton{
+                background-color: #03DAC5;
+                padding: 7px 30px;
+            }
+
+        }
+    }
+}
