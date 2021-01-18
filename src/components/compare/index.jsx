@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Redirect} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './compare.css';
@@ -12,8 +12,13 @@ const Compare = () => {
     // 38w5V8Ke2vsoSCBoTQUblP
     // 5KYJqvahaLoffrR9ZuDdVQ
 
+    useEffect(() => {        
+        return () => {
+            setRedirect(false)
+        }
+    }, [])
 
-    const onSubmit = params => {
+    const onSubmit = () => {
         setRedirect(true);
     }
 

@@ -1,0 +1,48 @@
+.list{
+    width: 70%;
+    margin: 0 auto;
+    border-left: 8px solid #BB86FC;
+    overflow-y: scroll;
+    height: 745px;
+    
+    
+    table{
+        width: 100%;        
+        border: none;
+        border-collapse: collapse;
+
+        tbody{
+            height: 100px;
+            
+        }
+
+        th{
+            color: #717171;
+            padding: 20px 0;
+            background-color: #1f1f1f;
+            position: sticky;
+            top: 0;
+        }
+
+        tr{
+            text-align: left;
+            
+
+            &:nth-child(even){
+                background-color: #1f1f1f;
+            }
+        }
+        
+        tbody{
+            td{
+                padding: 15px 25px 15px 0;
+                
+    
+                &:first-child{
+                    padding: 25px;
+                }
+            }
+        }
+        
+    }
+}

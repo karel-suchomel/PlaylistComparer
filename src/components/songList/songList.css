@@ -1,0 +1,43 @@
+.list {
+  width: 70%;
+  margin: 0 auto;
+  border-left: 8px solid #BB86FC;
+  overflow-y: scroll;
+  height: 745px;
+}
+
+.list table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.list table tbody {
+  height: 100px;
+}
+
+.list table th {
+  color: #717171;
+  padding: 20px 0;
+  background-color: #1f1f1f;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.list table tr {
+  text-align: left;
+}
+
+.list table tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
+.list table tbody td {
+  padding: 15px 25px 15px 0;
+}
+
+.list table tbody td:first-child {
+  padding: 25px;
+}
+/*# sourceMappingURL=songList.css.map */
