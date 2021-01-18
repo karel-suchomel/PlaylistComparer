@@ -1,31 +1,38 @@
 import React from 'react'
 import {useLocation} from 'react-router-dom';
 import {useQuery} from 'react-apollo';
-import {GET_PLAYLISTS} from '../queries';
+import {GET_PLAYLISTS, GET_SAME_TRACKS} from '../queries';
+import CompareDetail from '../components/compareDetail';
+import Loader from '../components/loader';
 
 const Compare = () => {
     let location = useLocation();
-    //console.log(location.state);
-    const {loading, error, data} = useQuery(GET_PLAYLISTS, {
+    let data = {};
+    const {loading: playlistLoading, error: playlistError, data: playlistData} = useQuery(GET_PLAYLISTS, {
         variables: {id1: location.state.playlist1, id2: location.state.playlist2}
     });
 
-    if (loading) {
-        return <div>Loading...</div>
+    const {loading: tracksLoading, error: tracksError, data: tracksData} = useQuery(GET_SAME_TRACKS, {
+        variables: {id1: location.state.playlist1, id2: location.state.playlist2}
+    });
+
+    if(playlistError){
+        return `Error! ${playlistError.message}`;
     }
-    if(error){
-        return `Error! ${error.message}`;
+    if(tracksError){
+        return `Error! ${tracksError.message}`;
     }
 
-    console.log(data);
+    if (playlistData && tracksData) {
+        data = {playlists: playlistData.playlists, tracks: tracksData.tracks};
+    }
+    
     return (
-        <div>
-            {data.playlists.map(playlist => (
-                <div key={playlist.name}>
-                    {playlist.name}
-                </div>
-            ))}
-        </div>
+        <section id="comparison">
+            <h1>Here are your results...</h1>
+            {(playlistLoading || tracksLoading) && <Loader />}
+            <CompareDetail playlists={data} />
+        </section>
     )
 }
 

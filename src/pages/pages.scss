@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     padding-top: 80px;
+    padding-bottom: 150px;
 
     .blob1, .blob2, .blob3{
         position: absolute;
@@ -24,7 +25,9 @@
     }
     .blob3{
         right: 0;
-        top: -30px;
+        bottom: -20px;
+        height: 70%;
+        display: none;
     }
 
     .highlight{
@@ -37,6 +40,7 @@
             font-size: 64px;
             font-weight: 700;
             margin-bottom: 80px;
+            text-align: center;
         }
         p{
             text-align: center;
@@ -46,16 +50,60 @@
         .cta{
             text-decoration: none;
             color: white;
-            background-color: #03DAC5;
+            background-color: #BB86FC;
             padding: 10px 30px;
             text-transform: uppercase;
+            cursor: pointer;
         }
         
         .cta:hover{
-            opacity: 0.8;
+            background-color: #a173da;
             transition: .3s all;
         }
     }
+}
 
-    
+#comparison{
+    padding: 70px 0 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .count{
+        margin-top: 80px;
+        text-align: center;
+        h2{
+            font-size: 22px;
+        }
+        p{
+            padding: 20px 0;
+            color:#03DAC5;
+            font-weight: 700;
+            font-size: 42px;
+        }
+    }
+}
+
+@media only screen and(min-width: 1440px){
+    #homepage{
+        .blob3{
+            display: block;
+        }
+
+        .highlight{
+            .cta{
+                background-color: #03DAC5;
+
+                &:hover{
+                    background-color: #0bb3a2;
+                }
+            }
+        }
+    }
 }

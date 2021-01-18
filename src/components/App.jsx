@@ -25,7 +25,7 @@ const App = () => {
                <Route path="/" exact render={() => <HomePage />} ></Route>
                <Route path="/shuffle" render={() => <ShufflePage />} ></Route>
                <Route path="/login" render={() => <LoginPage />} ></Route>
-               <Route path="/compare" render={() => <ComparePage />} ></Route>
+               <Route path="/compare" render={(props) => <ComparePage {...props} />} ></Route>
             </Layout>
          </Switch>
    );

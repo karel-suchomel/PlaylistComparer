@@ -1,58 +1,131 @@
 header {
   background-color: #1f1f1f;
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 50px;
+  width: 100%;
+}
+
+header #logo {
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 75px);
 }
 
 header #logo svg {
-  width: 60%;
+  width: 150px;
 }
 
-header nav {
-  width: 35%;
+header .right-nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-header nav .navigation {
-  list-style-type: none;
+header .right-nav .burger {
+  top: 20px;
+  padding-left: 20px;
+  z-index: 11;
+}
+
+header .right-nav .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px 0;
+  background-color: #1f1f1f;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  top: 0;
+  width: 100%;
 }
 
-header nav .navigation a {
+header .right-nav .navigation a {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   font-weight: 700;
+  margin: 20px 0;
 }
 
-header nav .navigation .loginButton {
+header .right-nav .navigation a:hover {
+  color: #03DAC5;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+header .right-nav .navigation .loginButton {
   background-color: #03DAC5;
   padding: 7px 30px;
+}
+
+header .right-nav .navigation .active {
+  color: #03DAC5;
+}
+
+header .right-nav .nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #logo {
+    left: 50px;
+    z-index: 15;
+  }
+  header .right-nav .burger {
+    display: none;
+  }
+  header .right-nav .navigation {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    right: 50px;
+    height: 100%;
+  }
+  header .right-nav .navigation a {
+    margin: 0 20px;
+  }
 }
 /*# sourceMappingURL=header.css.map */

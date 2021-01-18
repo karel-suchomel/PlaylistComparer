@@ -12,6 +12,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 80px;
+  padding-bottom: 150px;
 }
 
 #homepage .blob1, #homepage .blob2, #homepage .blob3 {
@@ -33,7 +34,9 @@
 
 #homepage .blob3 {
   right: 0;
-  top: -30px;
+  bottom: -20px;
+  height: 70%;
+  display: none;
 }
 
 #homepage .highlight {
@@ -57,6 +60,7 @@
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 80px;
+  text-align: center;
 }
 
 #homepage .highlight p {
@@ -67,14 +71,65 @@
 #homepage .highlight .cta {
   text-decoration: none;
   color: white;
-  background-color: #03DAC5;
+  background-color: #BB86FC;
   padding: 10px 30px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #homepage .highlight .cta:hover {
-  opacity: 0.8;
+  background-color: #a173da;
   -webkit-transition: .3s all;
   transition: .3s all;
+}
+
+#comparison {
+  padding: 70px 0 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#comparison h1 {
+  text-align: center;
+  font-size: 28px;
+}
+
+#comparison .count {
+  margin-top: 80px;
+  text-align: center;
+}
+
+#comparison .count h2 {
+  font-size: 22px;
+}
+
+#comparison .count p {
+  padding: 20px 0;
+  color: #03DAC5;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+@media only screen and (min-width: 1440px) {
+  #homepage .blob3 {
+    display: block;
+  }
+  #homepage .highlight .cta {
+    background-color: #03DAC5;
+  }
+  #homepage .highlight .cta:hover {
+    background-color: #0bb3a2;
+  }
 }
 /*# sourceMappingURL=pages.css.map */

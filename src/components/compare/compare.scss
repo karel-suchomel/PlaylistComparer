@@ -1,5 +1,5 @@
 .wrapper{
-    width: 60%;
+    width: 90%;
     background-color: #1f1f1f;
     display: flex;
     justify-content: center;
@@ -8,20 +8,24 @@
     padding: 80px 0;
     filter: drop-shadow(10px 10px 50px #000000 );
     
+    h2{
+        text-align: center;
+        padding: 0 25px;
+        font-size: 22px;
+    }
+
     .playlistInputs{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-
+        width: 80%;
         padding: 50px 0;
-
-        a{
-            cursor: pointer;
-        }
-
         form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span{
+                padding: 10px 0;
+                color: #CF6679;
+            }
             .textInput{
                 font-family: inherit;
                 width: 100%;
@@ -35,6 +39,8 @@
                 background: transparent;
                 transition: border-color 0.2s;
                 text-align: center;
+                font-size: 14px;
+                overflow: hidden;
             }
             
             .textInput:focus{
@@ -50,7 +56,53 @@
     }
     
     .cta{
-        width: 60%;
+        width: 100%;
         text-align: center;
+        background-color: #BB86FC;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+        padding: 15px 0;
+        border: none;
+        font-size: 14px;
+        margin-top: 20px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:hover{
+            background-color: #a173da;
+            transition: .3s all;
+        }
+
+        &:focus{
+            outline: none;
+        }
     }
-} 
+}
+
+@media only screen and(min-width: 1440px){
+    .wrapper{
+        width: 60%;
+
+        h2{
+            font-size: 24px;
+        }
+        
+        .playlistInputs{
+            form{
+                .textInput{
+                    font-size: 18px;
+                }
+            }
+        }
+        .cta{
+            background-color: #03DAC5;
+            font-size: 18px;
+
+            &:hover{
+                background-color: #0bb3a2;
+            }
+        }
+    }
+}
