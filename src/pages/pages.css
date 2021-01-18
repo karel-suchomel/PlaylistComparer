@@ -11,12 +11,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 #homepage .blob1, #homepage .blob2, #homepage .blob3 {
   position: absolute;
   z-index: -1;
+  height: 100%;
+  width: auto;
 }
 
 #homepage .blob1 {
@@ -31,7 +33,7 @@
 
 #homepage .blob3 {
   right: 0;
-  top: -100px;
+  top: -30px;
 }
 
 #homepage .highlight {
@@ -60,5 +62,19 @@
 #homepage .highlight p {
   text-align: center;
   padding-bottom: 30px;
+}
+
+#homepage .highlight .cta {
+  text-decoration: none;
+  color: white;
+  background-color: #03DAC5;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+
+#homepage .highlight .cta:hover {
+  opacity: 0.8;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 /*# sourceMappingURL=pages.css.map */

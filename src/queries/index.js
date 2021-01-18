@@ -1,11 +1,11 @@
 import { gql } from 'apollo-boost';
 
-const GET_PLAYLISTS_NAME = gql`
-   {
-      playlists(ids: ["5KYJqvahaLoffrR9ZuDdVQ", "38w5V8Ke2vsoSCBoTQUblP"]) {
+const GET_PLAYLISTS = gql`
+   query($id1: String, $id2: String) {
+      playlists(ids: [$id1, $id2]) {
          name
       }
    }
 `;
 
-export { GET_PLAYLISTS_NAME };
+export { GET_PLAYLISTS };

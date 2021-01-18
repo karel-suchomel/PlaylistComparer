@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <div id="logo">
-                <a href="https://edgy.digital">
+                <a href="/">
                     <svg width="212" height="40" viewBox="0 0 212 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.5 10.5L43 23.5L70 0V40H0L22.5 10.5Z" fill="#BB86FC"/>
                     <path d="M47.5 10.5L27 23.5L0 0V40H70L47.5 10.5Z" fill="#03DAC5"/>

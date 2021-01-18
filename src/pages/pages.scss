@@ -4,11 +4,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 80px;
+    padding-top: 80px;
 
     .blob1, .blob2, .blob3{
         position: absolute;
-        z-index: -1;        
+        z-index: -1;
+        height: 100%;
+        width: auto;
     }
 
     .blob1{
@@ -22,7 +24,7 @@
     }
     .blob3{
         right: 0;
-        top: -100px;
+        top: -30px;
     }
 
     .highlight{
@@ -39,6 +41,19 @@
         p{
             text-align: center;
             padding-bottom: 30px;
+        }
+
+        .cta{
+            text-decoration: none;
+            color: white;
+            background-color: #03DAC5;
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+        
+        .cta:hover{
+            opacity: 0.8;
+            transition: .3s all;
         }
     }
 

@@ -1,8 +1,8 @@
 import './button.css';
 
-const FlatButton = ({text, to}) => {
+const FlatButton = ({text}) => {
     return (
-        <a href={to} target="_blank" rel="noreferrer" className="cta"> 
+        <a target="_blank" rel="noreferrer" className="cta"> 
             {text}
         </a>
     )

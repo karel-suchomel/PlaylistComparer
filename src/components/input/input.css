@@ -16,6 +16,7 @@
 .textInput:focus{
     border-color: #03DAC5;
     transition: .3s all;
+    
 }
 
 .textInput:not(:first-child){
