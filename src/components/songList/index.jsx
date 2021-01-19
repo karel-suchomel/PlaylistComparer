@@ -4,22 +4,6 @@ import './songList.css';
 const SongList = ({data}) => {
     let counter = 0;
 
-    // const renderList = () => {
-    //     if (data) {
-    //         data.tracks.map(track => {
-    //             counter++;
-    //             return <tr key={track.name}>
-    //                 <td>{counter}</td>
-    //                 <td>{track.name}</td>
-    //                 <td>{track.artists[0].name}</td>
-    //                 <td>{track.album.name}</td>
-    //             </tr>
-    //         })
-    //     }else{
-    //         return <div>Loading...</div>
-    //     }
-    // }
-
     return (
         <div className="list">
             <table>

@@ -54,7 +54,7 @@ header .right-nav .navigation {
   width: 100%;
 }
 
-header .right-nav .navigation a {
+header .right-nav .navigation .nav-item {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
@@ -64,7 +64,7 @@ header .right-nav .navigation a {
   margin: 20px 0;
 }
 
-header .right-nav .navigation a:hover {
+header .right-nav .navigation .nav-item:hover {
   color: #03DAC5;
   -webkit-transition: .2s all;
   transition: .2s all;
@@ -124,7 +124,7 @@ header .right-nav .nav-active {
     right: 50px;
     height: 100%;
   }
-  header .right-nav .navigation a {
+  header .right-nav .navigation .nav-item {
     margin: 0 20px;
   }
 }

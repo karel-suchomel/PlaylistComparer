@@ -1,36 +1,41 @@
-import React from 'react'
-import {useQuery} from 'react-apollo';
-import {GET_PLAYLISTS, GET_SAME_TRACKS} from '../queries';
+import React, {useState} from 'react'
+import _ from 'lodash';
 import CompareDetail from '../components/compareDetail';
-import Loader from '../components/loader';
+import {useForm} from 'react-hook-form';
 
-const Compare = ({location}) => {
-    const {loading: playlistLoading, error: playlistError, data: playlistData} = useQuery(GET_PLAYLISTS, {
-        variables: {id1: location.state.playlist1, id2: location.state.playlist2}
-    });
+const ComparePage = ({location}) => {
+    const [playlistIDs, setPlaylistIDS] = useState({ids: location.state});
+    const [noIDs, setIDsBool] = useState(true);
+    const {handleSubmit, register, errors} = useForm();
 
-    const {loading: tracksLoading, error: tracksError, data: tracksData} = useQuery(GET_SAME_TRACKS, {
-        variables: {id1: location.state.playlist1, id2: location.state.playlist2}
-    });
+    const onSubmit = (params) => { 
+        setPlaylistIDS({ids: params});
+        setIDsBool(false);
+    };
 
-
-    if(playlistError){
-        return `Error! ${playlistError.message}`;
-    }
-    if(tracksError){
-        return `Error! ${tracksError.message}`;
-    }
-
-    if (tracksLoading || playlistLoading) {
-        return <Loader />
-    }
-
-    return (
-        <section id="comparison">
-            <h1>Here are your results...</h1>            
-            <CompareDetail playlists={playlistData} tracks={tracksData} />
-        </section>
-    )
+    if (noIDs && _.isEmpty(location.state)) {
+        return (
+            <div id="compare" className="wrapper">
+                <h2>Link the playlists you want to compare.</h2>
+                <div className="playlistInputs">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input name="id1" className="textInput" ref={register({required:true})} placeholder="Playlist link" />
+                        {errors.id1 && <span>This field is required</span>}
+                        <input name="id2" className="textInput" ref={register({required:true})} placeholder="Playlist link" />                    
+                        {errors.id2 && <span>This field is required</span>}
+                        <button type="submit" className="cta">COMPARE</button>                    
+                    </form>
+                </div>
+            </div>
+        )
+    }else{
+        return (
+            <section id="comparison">
+                <h1>Here are your results...</h1>            
+                <CompareDetail playlists={playlistIDs}/>
+            </section>
+        )
+    }    
 }
 
-export default Compare
+export default ComparePage
