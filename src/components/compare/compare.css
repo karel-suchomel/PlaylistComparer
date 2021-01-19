@@ -109,6 +109,13 @@
   .wrapper h2 {
     font-size: 24px;
   }
+  .wrapper .cta {
+    background-color: #03DAC5;
+    font-size: 16px;
+  }
+  .wrapper .cta:hover {
+    background-color: #0bb3a2;
+  }
   .wrapper .playlistInputs form .textInput {
     font-size: 18px;
   }
@@ -120,13 +127,6 @@
   }
   .wrapper h2 {
     font-size: 24px;
-  }
-  .wrapper .cta {
-    background-color: #03DAC5;
-    font-size: 18px;
-  }
-  .wrapper .cta:hover {
-    background-color: #0bb3a2;
   }
 }
 /*# sourceMappingURL=compare.css.map */

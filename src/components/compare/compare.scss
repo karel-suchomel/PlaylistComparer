@@ -89,6 +89,14 @@
             font-size: 24px;
         }
         
+        .cta{
+            background-color: #03DAC5;
+            font-size: 16px;
+
+            &:hover{
+                background-color: #0bb3a2;
+            }
+        }
         .playlistInputs{
             form{
                 .textInput{
@@ -107,13 +115,6 @@
             font-size: 24px;
         }
 
-        .cta{
-            background-color: #03DAC5;
-            font-size: 18px;
-
-            &:hover{
-                background-color: #0bb3a2;
-            }
-        }
+        
     }
 }
