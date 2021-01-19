@@ -1,5 +1,5 @@
 .list{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     border-left: 8px solid #BB86FC;
     overflow-y: scroll;
@@ -8,10 +8,11 @@
     
 
     table{
-        width: 100%;        
+        width: 100%;
         border: none;
         border-collapse: collapse;
 
+        
         tbody{
             height: 100px;
             
@@ -38,12 +39,87 @@
             td{
                 padding: 15px 25px 15px 0;
                 
-    
+                h2{
+                    font-size: 16px;
+                    width: 160px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
                 &:first-child{
                     padding: 25px;
                 }
             }
         }
         
+    }
+}
+
+.mobileList{
+    padding: 0 30px;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: #1f1f1f;
+    .listRow{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+        padding: 10px 0;
+
+        img{
+            width: 60px;
+            height: 60px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 0 20px;
+            font-size: 16px;
+        }
+
+        p{
+            color: #717171;
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .list{
+        table{
+            tbody{
+                td{
+                    h2{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .list{
+        table{
+            tbody{
+                td{
+                    h2{
+                        width: 350px;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,OAAO;CACnB",
+    "sources": [
+        "playlistDetail.scss"
+    ],
+    "names": [],
+    "file": "playlistDetail.css"
+}

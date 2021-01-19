@@ -1,0 +1,142 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.card .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.card .header img {
+  width: 190px;
+  height: 190px;
+}
+
+.card .header .info {
+  padding: 40px 0 50px;
+  text-align: center;
+}
+
+.card .header .info .playlistName {
+  text-decoration: none;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.card .header .info .playlistName:hover {
+  text-decoration: underline;
+}
+
+.card .header .info .owner {
+  color: #717171;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card .header .info .description {
+  text-align: left;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  color: #717171;
+  border: 1px solid #383838;
+  border-radius: 5px;
+}
+
+.card .stats {
+  width: 100%;
+}
+
+.card .stats .stat {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0;
+}
+
+.card .stats .stat h3 {
+  font-size: 18px;
+}
+
+.card .stats .stat p {
+  color: #03DAC5;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card:not(:first-child) {
+  border-top: 2px solid #383838;
+  margin-top: 80px;
+}
+
+.card:not(:first-child) .header {
+  margin-top: 80px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards {
+    width: 100%;
+  }
+  .cards .card .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cards .card .header img {
+    width: 250px;
+    height: 250px;
+  }
+  .cards .card .header .info {
+    padding: 0 0 0 40px;
+    text-align: left;
+  }
+  .cards .card .header .info .owner {
+    text-align: left;
+  }
+  .cards .card .header .info .description {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .cards .card .stats {
+    margin-top: 50px;
+  }
+  .cards .card .stats .stat {
+    width: 50%;
+  }
+  .cards .card .stats .stat h3 {
+    font-size: 22px;
+  }
+  .cards .card .stats .stat p {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=playlistCard.css.map */

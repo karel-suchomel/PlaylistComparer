@@ -8,6 +8,8 @@ const ComparePage = ({location}) => {
     const [noIDs, setIDsBool] = useState(true);
     const {handleSubmit, register, errors} = useForm();
 
+    console.log(location.state);
+
     const onSubmit = (params) => { 
         setPlaylistIDS({ids: params});
         setIDsBool(false);
@@ -15,18 +17,20 @@ const ComparePage = ({location}) => {
 
     if (noIDs && _.isEmpty(location.state)) {
         return (
-            <div id="compare" className="wrapper">
-                <h2>Link the playlists you want to compare.</h2>
-                <div className="playlistInputs">
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <input name="id1" className="textInput" ref={register({required:true})} placeholder="Playlist link" />
-                        {errors.id1 && <span>This field is required</span>}
-                        <input name="id2" className="textInput" ref={register({required:true})} placeholder="Playlist link" />                    
-                        {errors.id2 && <span>This field is required</span>}
-                        <button type="submit" className="cta">COMPARE</button>                    
-                    </form>
+            <section id="comparison">
+                <div id="compare" className="wrapper">
+                    <h2>Link the playlists you want to compare.</h2>
+                    <div className="playlistInputs">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input name="id1" className="textInput" ref={register({required:true})} placeholder="Playlist link" />
+                            {errors.id1 && <span>This field is required</span>}
+                            <input name="id2" className="textInput" ref={register({required:true})} placeholder="Playlist link" />                    
+                            {errors.id2 && <span>This field is required</span>}
+                            <button type="submit" className="cta">COMPARE</button>                    
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </section>
         )
     }else{
         return (

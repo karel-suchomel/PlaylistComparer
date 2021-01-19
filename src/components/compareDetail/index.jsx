@@ -2,11 +2,13 @@ import React from 'react';
 import {useQuery} from 'react-apollo';
 import {GET_PLAYLISTS, GET_SAME_TRACKS} from '../../queries';
 
-import SongList from '../songList';
 import Loader from '../loader';
+import SongList from '../songList';
+import PlaylistDetail from '../playlistDetail';
 
 
 const CompareDetail = ({playlists}) => {
+    console.log(playlists);
     const {loading: playlistLoading, error: playlistError, data: playlistData} = useQuery(GET_PLAYLISTS, {
         variables: playlists.ids
     });
@@ -33,6 +35,7 @@ const CompareDetail = ({playlists}) => {
             <h2>same songs!</h2>
         </div>
         <SongList data={tracksData} />
+        <PlaylistDetail data={playlistData} />
         </>
     )
 }

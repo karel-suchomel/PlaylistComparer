@@ -1,12 +1,14 @@
 header {
   background-color: #1f1f1f;
-  height: 80px;
+  height: 70px;
   width: 100%;
+  position: fixed;
+  z-index: 99;
 }
 
 header #logo {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: calc(50% - 75px);
 }
 
@@ -24,6 +26,10 @@ header .right-nav .burger {
   top: 20px;
   padding-left: 20px;
   z-index: 11;
+}
+
+header .right-nav .burger .open {
+  position: fixed;
 }
 
 header .right-nav .navigation {

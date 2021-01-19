@@ -20,6 +20,7 @@ const Header = () => {
             <div className="right-nav">
             <Burger isOpen={isOpen} onClick={() => setOpen(!isOpen)} className="burger"/>
                 <div className={isOpen ? "nav-active navigation" : "navigation"}>
+                
                     <NavLink to="/" activeClassName="active" exact className="nav-item">HOME</NavLink>
                     <NavLink to={{pathname: '/compare', state: {}}} activeClassName="active" className="nav-item">COMPARE</NavLink>
                     <NavLink to="/shuffle" activeClassName="active" className="nav-item">SHUFFLE</NavLink>
