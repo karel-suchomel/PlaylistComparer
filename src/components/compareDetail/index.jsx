@@ -1,20 +1,20 @@
 import React from 'react';
-import SongList from '../songList';
-import _ from 'lodash';
 
-const CompareDetail = ({playlists}) => {
-    let count = {};
-    if (!_.isEmpty(playlists)) {
-        count = Object.keys(playlists.tracks).length;
-    }
+import SongList from '../songList';
+
+
+const CompareDetail = ({playlists, tracks}) => {
+
+    console.log(playlists);
+    console.log(tracks);
     return (
         <>
         <div className="count">
             <h2>You are vibing</h2>
-            <p>{count?count:"000"}</p>
+            <p>{Object.keys(tracks.tracks).length}</p>
             <h2>same songs!</h2>
         </div>
-        <SongList data={playlists} />
+        <SongList data={tracks} />
         </>
     )
 }

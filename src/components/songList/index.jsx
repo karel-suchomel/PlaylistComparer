@@ -3,7 +3,7 @@ import './songList.css';
 
 const SongList = ({data}) => {
     let counter = 0;
-    console.log(data);
+
     // const renderList = () => {
     //     if (data) {
     //         data.tracks.map(track => {
@@ -33,14 +33,14 @@ const SongList = ({data}) => {
                 </thead>
                 <tbody>
                     {data.tracks.map(track => {
-                counter++;
-                return <tr key={track.name}>
-                    <td>{counter}</td>
-                    <td>{track.name}</td>
-                    <td>{track.artists[0].name}</td>
-                    <td>{track.album.name}</td>
-                </tr>
-            })}
+                        counter++;
+                        return <tr key={track.name}>
+                            <td>{counter}</td>
+                            <td>{track.name}</td>
+                            <td>{track.artists[0].name}</td>
+                            <td>{track.album.name}</td>
+                        </tr>
+                    })}
                 </tbody>
                 
             </table>

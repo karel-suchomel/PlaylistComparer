@@ -81,9 +81,9 @@
     }
 }
 
-@media only screen and(min-width: 1440px){
+@media only screen and(min-width: 1024px){
     .wrapper{
-        width: 60%;
+        width: 70%;
 
         h2{
             font-size: 24px;
@@ -96,6 +96,17 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and(min-width: 1440px){
+    .wrapper{
+        width: 60%;
+
+        h2{
+            font-size: 24px;
+        }
+
         .cta{
             background-color: #03DAC5;
             font-size: 18px;

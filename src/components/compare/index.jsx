@@ -5,7 +5,7 @@ import './compare.css';
 
 const Compare = () => {
     const [redirect, setRedirect] = useState(false);
-    const {handleSubmit,watch, register, errors} = useForm();
+    const {handleSubmit, watch, register, errors} = useForm();
     const playlist1 = watch('playlist1', null);
     const playlist2 = watch('playlist2', null);
 
@@ -14,7 +14,8 @@ const Compare = () => {
 
     useEffect(() => {        
         return () => {
-            setRedirect(false)
+            setRedirect(false);
+
         }
     }, [])
 
