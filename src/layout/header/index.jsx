@@ -24,7 +24,7 @@ const Header = () => {
                     <NavLink to="/" activeClassName="active" exact className="nav-item">HOME</NavLink>
                     <NavLink to={{pathname: '/compare', state: {}}} activeClassName="active" className="nav-item">COMPARE</NavLink>
                     <NavLink to="/shuffle" activeClassName="active" className="nav-item">SHUFFLE</NavLink>
-                    <Link to="/login" className="loginButton nav-item">LOGIN</Link>
+                    <a href="https://localhost:44329/test/" className="loginButton nav-item">LOGIN</a>
                 </div>                
             </div>            
         </header>

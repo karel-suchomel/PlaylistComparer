@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 //import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import { ApolloClient, InMemoryCache} from '@apollo/client'
 import { ApolloProvider } from '@apollo/react-hooks';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Router } from 'react-router-dom';
 import './index.css';
 import './assets/styles/global.css';
 import App from './components/App';
+import history from './history';
 
 const client = new ApolloClient({
-   uri: 'https://localhost:44329/graphql/',
+   uri: 'https://localhost:5001/graphql/',
    cache: new InMemoryCache(),
    credentials: 'include',
    defaultOptions: {
@@ -24,9 +25,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
    <ApolloProvider client={client}>
-      <BrowserRouter>
+      <Router history={history}>
          <App />
-      </BrowserRouter>      
+      </Router>      
    </ApolloProvider>,
    document.getElementById('root')
 );

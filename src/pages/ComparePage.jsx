@@ -2,20 +2,21 @@ import React, {useState} from 'react'
 import _ from 'lodash';
 import CompareDetail from '../components/compareDetail';
 import {useForm} from 'react-hook-form';
+import history from '../history';
 
-const ComparePage = ({location}) => {
-    const [playlistIDs, setPlaylistIDS] = useState({ids: location.state});
-    const [noIDs, setIDsBool] = useState(true);
+const ComparePage = ({location, history}) => {
+    const [playlistIDs, setPlaylistIDS] = useState({ids: history.location.state});
     const {handleSubmit, register, errors} = useForm();
 
-    console.log(location.state);
-
     const onSubmit = (params) => { 
-        setPlaylistIDS({ids: params});
-        setIDsBool(false);
+        history.push({
+            pathname:'/compare',
+            state: {ids: params}
+        })
     };
 
-    if (noIDs && _.isEmpty(location.state)) {
+    if (_.isEmpty(history.location.state)) {
+        
         return (
             <section id="comparison">
                 <div id="compare" className="wrapper">
@@ -36,7 +37,7 @@ const ComparePage = ({location}) => {
         return (
             <section id="comparison">
                 <h1>Here are your results...</h1>            
-                <CompareDetail playlists={playlistIDs}/>
+                <CompareDetail playlists={history.location.state}/>
             </section>
         )
     }    

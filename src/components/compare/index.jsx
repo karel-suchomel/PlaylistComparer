@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Redirect} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './compare.css';
+import history from '../../history';
 
 const Compare = () => {
     const [redirect, setRedirect] = useState(false);
@@ -17,17 +18,21 @@ const Compare = () => {
         }
     }, [])
 
-    const onSubmit = (params) => {
-        setPlaylistIDS(params);
-        setRedirect(true);
+    const onSubmit = (ids) => {
+        // setPlaylistIDS(params);
+        // setRedirect(true);
+        history.push({
+            pathname: '/compare',
+            state: {ids}
+        });
     }
 
-    if (redirect) {
-        return <Redirect to={{
-            pathname: '/compare',
-            state: playlistIDs
-        }} />
-    }
+    // if (redirect) {
+    //     return <Redirect to={{
+    //         pathname: '/compare',
+    //         state: playlistIDs
+    //     }} />
+    // }
 
     return (
         <div id="compare" className="wrapper">
