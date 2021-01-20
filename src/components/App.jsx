@@ -5,18 +5,22 @@ import HomePage from '../pages/HomePage';
 import ShufflePage from '../pages/ShufflePage';
 import LoginPage from '../pages/LoginPage';
 import ComparePage from '../pages/ComparePage';
+import ScrollToTop from './scrollToTop';
 
 const App = () => {
  
    return (      
-         <Switch>
-               <Layout>
-                  <Route path="/" exact render={() => <HomePage />} ></Route>
-                  <Route path="/shuffle" render={() => <ShufflePage />} ></Route>
-                  <Route path="/login" render={() => <LoginPage />} ></Route>
-                  <Route path="/compare" render={(props) => <ComparePage {...props} />} ></Route>
-               </Layout>
-         </Switch>
+         <>
+            <ScrollToTop />
+                  <Switch>
+                  <Layout>
+                        <Route path="/" exact render={() => <HomePage />} ></Route>
+                        <Route path="/shuffle" render={() => <ShufflePage />} ></Route>
+                        <Route path="/login" render={() => <LoginPage />} ></Route>
+                        <Route path="/compare" render={(props) => <ComparePage {...props} />} ></Route>
+                  </Layout>
+            </Switch>
+         </>         
    );
 };
 

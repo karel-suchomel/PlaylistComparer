@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useForm } from 'react-hook-form';
 import './compare.css';
 import history from '../../history';
 
 const Compare = () => {
-
     const {handleSubmit, register, errors} = useForm();
 
     // 38w5V8Ke2vsoSCBoTQUblP
     // 5KYJqvahaLoffrR9ZuDdVQ
+
+    useEffect(()=>{
+        document.body.scrollTop = 0;
+    });
 
     const onSubmit = (ids) => {
         history.push({
