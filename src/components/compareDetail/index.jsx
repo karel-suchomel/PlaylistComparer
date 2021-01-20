@@ -28,9 +28,7 @@ const CompareDetail = ({playlists}) => {
     }
     if (playlistLoading || tracksLoading || !playlistData || !tracksData) {
         return <Loader />
-    }
-
-    
+    }    
 
     return (
         <>

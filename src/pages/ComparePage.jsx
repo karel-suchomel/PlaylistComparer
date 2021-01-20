@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import _ from 'lodash';
 import CompareDetail from '../components/compareDetail';
 import {useForm} from 'react-hook-form';
-import history from '../history';
 
-const ComparePage = ({location, history}) => {
-    const [playlistIDs, setPlaylistIDS] = useState({ids: history.location.state});
+const ComparePage = ({history}) => {
     const {handleSubmit, register, errors} = useForm();
 
     const onSubmit = (params) => { 
